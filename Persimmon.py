@@ -54,10 +54,12 @@ Good luck!""")
         """)
         time.sleep(3)
         continue
-        
+    
+    time.sleep(2)
+    rounds = int(input("How many rounds would you like to play?"))
     score = 0
-    playing = "Y"
-    while playing == "Y":
+                 
+    for x in range(rounds):
         time.sleep(0.5)
         randint = random.randint(1,maxn)
         guess = int(input("TIME TO GUESS! GUESS A NUMBER BETWEEN 1 AND " + str(maxn) + "! "))
@@ -67,7 +69,7 @@ Good luck!""")
         else:
             score += -1
             print("INCORRECT! YOUR SCORE IS NOW",str(score) + ".")
-        playing = input("PLAY ANOTHER? Y/N ")
 
     time.sleep(2)
     print("GAME OVER! You scored",str(score) + "!")
+    time.sleep(2)
