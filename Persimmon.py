@@ -1,3 +1,10 @@
+def isInt(s):
+    try: 
+        int(s)
+        return True
+    except ValueError:
+        return False
+
 while True:
     import time, random
     print("""
@@ -56,7 +63,24 @@ Good luck!""")
         continue
     
     time.sleep(2)
-    rounds = int(input("How many rounds would you like to play?"))
+    rounds = input("How many rounds would you like to play?")
+    
+    if isInt(rounds) == True:
+        rounds = int(rounds)
+    else:
+        print("""
+
+    =======+++=======
+          ERROR:
+     ENTER A CORRECT
+          VALUE!
+      RESTARTING...
+    =======+++=======
+
+        """)
+        time.sleep(3)
+        continue
+    
     score = 0
                  
     for x in range(rounds):
