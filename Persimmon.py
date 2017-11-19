@@ -4,6 +4,23 @@ def isInt(s):
         return True
     except ValueError:
         return False
+def restart():
+    time.sleep(1)
+    print("""
+
+    =======+++=======
+          ERROR:
+     ENTER A CORRECT
+          VALUE!
+      RESTARTING...
+    =======+++=======
+
+        """)
+    time.sleep(3)
+    restart = 1
+    while restart == 1:
+        restart = 0
+        continue
 
 while True:
     import time, random
@@ -24,18 +41,8 @@ while True:
     elif difficulty == "HARD":
         maxn = 10
     else:
-        print("""
+        restart()
 
-    =======+++=======
-          ERROR:
-     ENTER A CORRECT
-          VALUE!
-      RESTARTING...
-    =======+++=======
-
-        """)
-        time.sleep(3)
-        continue
     rules = input("Would you like to read the rules? Y/N ")
     if rules == "Y":
         print("""RULES:
@@ -49,37 +56,17 @@ Good luck!""")
         pass
     
     else:
-        print("""
-
-    =======+++=======
-          ERROR:
-     ENTER A CORRECT
-          VALUE!
-      RESTARTING...
-    =======+++=======
-
-        """)
-        time.sleep(3)
-        continue
+        restart()
     
     time.sleep(2)
     rounds = input("How many rounds would you like to play?")
     
     if isInt(rounds) == True:
         rounds = int(rounds)
+        if rounds <= 0:
+            restart()
     else:
-        print("""
-
-    =======+++=======
-          ERROR:
-     ENTER A CORRECT
-          VALUE!
-      RESTARTING...
-    =======+++=======
-
-        """)
-        time.sleep(3)
-        continue
+        restart()
     
     score = 0
                  
