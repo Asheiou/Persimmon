@@ -1,7 +1,7 @@
 # Persimmon
 Persimmon is a fun little python random number game. Play it today!  
   
-Setup  
+(https://github.com/iiSkyii/Persimmon/wiki/Setup "Setup")
 RULES:  
 A number will be randomly selected each round.  
 Guess the number correctly to get 10 points.  
